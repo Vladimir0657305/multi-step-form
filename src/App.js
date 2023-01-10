@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import {  Routes, Route } from 'react-router-dom';
+import background from '../src/images/bg-sidebar-desktop.svg'
 import './App.css';
+import Footer from './components/Footer';
+import PersonalInfo from './components/PersonalInfo';
+
+const subtitles = ['YOUR INFO', 'SELECT PLAN', 'ADD-ONS', 'SUMMARY'];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <div className="App">
+          {/* <img src={background} alt="bg" /> */}
+          <main className='main'>
+            <Routes>
+              <Route path='/' element={<PersonalInfo  />} />
+              {/* <Route path='/country/:name' element={<Details />} />
+              <Route path='*' element={<NotFound />} />  */}
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
 
