@@ -15,12 +15,6 @@ export default function SelectPlan() {
         setCheckedPlan(props);
     }
 
-    useEffect(() => {
-        console.log('=====>', checkedPlan);
-        console.log(plan);
-    }, [checkedPlan])
-
-
     const onClickCard = (props) => {
         setPeriod(checkedPlan ? 'Yearly' : 'Monthly')
         setPlan(props);

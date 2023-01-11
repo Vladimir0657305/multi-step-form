@@ -47,3 +47,8 @@
         letter-spacing: 1px;
     }
 }
+.number-active {
+    background: hsl(206, 94%, 87%);
+        transition: all 0.3s ease;
+        color: #000;
+}
