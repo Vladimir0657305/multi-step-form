@@ -1,6 +1,6 @@
 import './Sidebar.scss';
 
-export default function Sidebar() {
+export default function Sidebar(stepCount) {
 
     return (
         <>

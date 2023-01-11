@@ -1,15 +1,13 @@
-.context {
-    // width: 100%;
-    // flex: 0 0 50%;
-    height: auto;
-    max-height: 600px;
+.titleContext {
+    height: 65px;
     text-align: left;
     margin-top: 3rem;
     margin-left: 4rem;
+    margin-bottom: 1rem;
     // border: 1px solid red;
-    position: relative;
+    // position: relative;
 
-    .context-title {
+    .titleContext-block {
         color: hsl(227, 46%, 17%);
         padding: 0;
         margin-bottom: 1.6rem;

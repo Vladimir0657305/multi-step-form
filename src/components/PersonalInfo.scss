@@ -1,6 +1,6 @@
 .personalInfo-main {
     margin-left: 4rem;
-    // position: relative;
+    // border: 1px solid blue;
 }
 
 .context-main {
@@ -21,7 +21,7 @@
     }
     input {
         display: block;
-        width: 440px;
+        width: 447px;
         height: 40px;
         border-radius: 7px;
         border: 1px solid hsl(229, 7%, 68%);
@@ -38,18 +38,3 @@
         }
     }
 }
-
-
-// .context-buttons {
-//         padding: 10px 15px;
-//         color: #fff;
-//         border-radius: 5px;
-//         background-color: rgb(20, 7, 122);
-//         position: absolute;
-//         bottom: 0;
-//         right: 0;
-        
-//         &:hover {
-//             background-color: hsl(243, 100%, 62%);
-//     }
-// }

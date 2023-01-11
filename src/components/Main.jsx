@@ -6,6 +6,7 @@ import Title from './Title';
 import './Main.scss';
 import PersonalInfo from './PersonalInfo';
 import SelectPlan from './SelectPlan';
+import PickAddOns from './PickAddOns';
 
 export const FormInputData = createContext('');
 
@@ -17,6 +18,13 @@ export default function Main() {
     const [inputPhone, setInputPhone] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState('');
+    const [plan, setPlan] = useState('');
+    const [period, setPeriod] = useState('Monthly');
+    const [onlineServ, setOnlineServ] = useState(false);
+    const [largerStorage, setLargerStorage] = useState(false);
+    const [customProfile, setCustomProfile] = useState(false);
+
+    let stepCount = 0;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,31 +35,47 @@ export default function Main() {
         setSuccess(true);
     }
 
+    useEffect(() => {
+        console.log(plan, period);
+    }, [plan, period])
+
     return (
         <>
             <section>
                 <div className='main-block'>
-                    <FormInputData.Provider value={{ user, setUser, inputEmail, setInputEmail, inputPhone, setInputPhone, errMsg, setErrMsg, success, setSuccess }}>
-                    <div className='side'>
-                        <Sidebar />
-                    </div>
-                    <main className='main-context'>
-                        {/* <div className="context"> */}
-                        <Title />
-                        {/* </div> */}
-                        <Routes>
-                            <Route path='/' element={<PersonalInfo />} />
-                            <Route path='/selectplan' element={<SelectPlan />} />
-                            {/* <Route path='*' element={<NotFound />} />  */}
-                        </Routes>
+                    <FormInputData.Provider value={{
+                        user, setUser,
+                        inputEmail, setInputEmail,
+                        inputPhone, setInputPhone,
+                        errMsg, setErrMsg,
+                        success, setSuccess,
+                        plan, setPlan,
+                        period, setPeriod,
+                        onlineServ, setOnlineServ,
+                        largerStorage, setLargerStorage,
+                        customProfile, setCustomProfile
+                    }}>
+                        <div className='side'>
+                            <Sidebar stepCount={stepCount} />
+                        </div>
+                        <main className='main-context'>
+                            {/* <div className="context"> */}
+                            <Title />
+                            {/* </div> */}
+                            <Routes>
+                                <Route path='/' element={<PersonalInfo />} />
+                                <Route path='/selectplan' element={<SelectPlan />} />
+                                <Route path='/pickaddons' element={<PickAddOns />} />
+                                {/* <Route path='*' element={<NotFound />} />  */}
+                            </Routes>
 
 
-                        <ContextButton />
-                        {/* <div className="context-buttons">
+                            <ContextButton />
+                            {/* <div className="context-buttons">
                             <button >Next Step</button>
                         </div> */}
 
-                    </main>
+                        </main>
                     </FormInputData.Provider>
                 </div>
             </section>
