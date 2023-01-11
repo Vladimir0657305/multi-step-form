@@ -2,7 +2,7 @@
     // display: flex;
     // width: 100%;
     // border: 1px solid red;
-    margin-left: 4rem;
+    // margin-left: 4rem;
 }
 
 .context {
@@ -31,6 +31,7 @@
     }
     .context-card {
         width: 130px;
+        height: 189px;
         border-radius: 10px;
         margin-right: 20px;
         border: 2px solid hsl(229, 7%, 68%);
@@ -43,18 +44,33 @@
             font-size: 14px;
             margin-top: -15px;
             margin-left: 20px;
-            margin-bottom: 20px;
+            // padding: 5px 0 2px 0;
+            // margin-bottom: 10px;
+            color: hsl(229, 7%, 68%);
+            // &:last-child {
+            //     color: #000;
+            //     font-weight: 700;
+            // }
+            
         }
         &:hover {
             border: 2px solid hsl(227, 46%, 17%);
         }
+        
     }
+    
 }
+.lastSpan{
+        color: hsl(228, 45%, 44%) !important;
+        font-weight: 700;
+        border: 1px sold red;
+    }
+
 .context-main__switch {
     width: 96%;
     height: 50px;
     border-radius: 10px;
-    margin: 30px 0 136px 0;
+    margin: 30px 0 95px 0;
     color: hsl(229, 7%, 68%);
     background-color: hsl(230, 23%, 95%);
     font-weight: 700;
@@ -63,7 +79,6 @@
     justify-content: center;
 }
 .context-switch {
-    // vertical-align: middle;
     height: 40px;
     margin: -5px 15px 0 15px;
 }

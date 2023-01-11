@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import ContextButton from './ContextButton';
 import Sidebar from './Sidebar';
 import Title from './Title';
@@ -18,13 +18,14 @@ export default function Main() {
     const [inputPhone, setInputPhone] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState('');
+    const [checkedPlan, setCheckedPlan] = useState(false);
     const [plan, setPlan] = useState('');
     const [period, setPeriod] = useState('Monthly');
     const [onlineServ, setOnlineServ] = useState(false);
     const [largerStorage, setLargerStorage] = useState(false);
     const [customProfile, setCustomProfile] = useState(false);
-
-    let stepCount = 0;
+    const [stepCount, setStepCount] = useState(0);
+    let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,8 +37,27 @@ export default function Main() {
     }
 
     useEffect(() => {
-        console.log(plan, period);
     }, [plan, period])
+
+    useEffect(() => {
+        switch (stepCount) {
+            case 0 : 
+                navigate('/')
+            break;
+            case 1 : 
+                navigate('/selectplan')
+            break;
+            case 2 : 
+                navigate('/pickaddons')
+            break;
+            
+        }
+    },[stepCount])
+
+    useEffect(() => {
+        stepCount === 0 && setCheckedPlan(false) 
+        // stepCount === 0 ? setCheckedPlan(false) : stepCount
+    }, [stepCount])
 
     return (
         <>
@@ -49,11 +69,13 @@ export default function Main() {
                         inputPhone, setInputPhone,
                         errMsg, setErrMsg,
                         success, setSuccess,
+                        checkedPlan, setCheckedPlan,
                         plan, setPlan,
                         period, setPeriod,
                         onlineServ, setOnlineServ,
                         largerStorage, setLargerStorage,
-                        customProfile, setCustomProfile
+                        customProfile, setCustomProfile,
+                        stepCount, setStepCount
                     }}>
                         <div className='side'>
                             <Sidebar stepCount={stepCount} />

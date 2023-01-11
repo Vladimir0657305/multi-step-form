@@ -1,19 +1,24 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './SelectPlan.scss';
 import Switch from "react-switch";
 import { FormInputData } from './Main';
 
-const priceArr = [9, 12, 15];
+export const priceArrMonthly = [9, 12, 15];
+export const priceArrYearly = [9, 12, 15];
 
 export default function SelectPlan() {
-    const [checkedPlan, setCheckedPlan] = useState(false);
+    const { checkedPlan, setCheckedPlan } = useContext(FormInputData);
     const { plan, setPlan } = useContext(FormInputData);
     const { period, setPeriod } = useContext(FormInputData);
 
-    const handleChange = (checkedPlan) => {
-        setCheckedPlan(checkedPlan);
+    const handleChange = (props) => {
+        setCheckedPlan(props);
     }
 
+    useEffect(() => {
+        console.log('=====>', checkedPlan);
+        console.log(plan);
+    }, [checkedPlan])
 
 
     const onClickCard = (props) => {
@@ -32,26 +37,34 @@ export default function SelectPlan() {
                                 <div className='context-card' onClick={() => onClickCard('Arcade')} >
                                     <img src='../images/icon-arcade.svg' alt='context-card-image' />
                                     <h4>Arcade</h4>
-                                    <span>${priceArr[0]}/mo</span>
+                                    {
+                                        checkedPlan ? <><span >${priceArrYearly[0]}/yr </span> <br /> <span className='lastSpan' >2 months free</span></>
+                                            :
+                                            <span>${priceArrMonthly[0]}/mo</span>
+                                    }
                                 </div>
                                 <div className='context-card' onClick={() => onClickCard('Advanced')} >
                                     <img src='../images/icon-advanced.svg' alt='context-card-image' />
                                     <h4>Advanced</h4>
-                                    <span>${priceArr[1]}/mo</span>
+                                    {
+                                        checkedPlan ? <><span>${priceArrYearly[1]}/yr    </span> <br />  <span className='lastSpan'>2 months free</span></>
+                                            :
+                                            <span>${priceArrMonthly[1]}/mo</span>
+                                    }
                                 </div>
                                 <div className='context-card' onClick={() => onClickCard('Pro')}>
                                     <img src='../images/icon-pro.svg' alt='context-card-image' />
-
                                     <h4>Pro</h4>
-                                    <span>${priceArr[2]}/mo</span>
+                                    {
+                                        checkedPlan ? <><span>${priceArrYearly[2]}/yr    </span> <br />  <span className='lastSpan'>2 months free</span></>
+                                            :
+                                            <span>${priceArrMonthly[2]}/mo</span>
+                                    }
                                 </div>
                             </div>
                             <div className='context-main__switch'>
                                 <p className={checkedPlan ? '' : 'switchActive'} >Monthly</p>
-                                {/* <label>
-                                    <span>Switch with default style</span>
-                                    <Switch onChange={this.handleChange} checked={this.state.checked} />
-                                </label> */}
+
                                 <label htmlFor="context-switch">
                                     <Switch
                                         id='context-switch'
