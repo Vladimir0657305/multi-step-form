@@ -1,69 +1,55 @@
-.personalInfo-block {
-    display: flex;
-    width: 100%;
-    // margin-left: 3rem;
-    // border: 1px solid red;
-    // background-color: red;
-}
-
-.personalInfo-side {
-    flex: 0 0 50%;
-}
-
-// =======================================================================================================================
-.context {
-    // width: 100%;
-    flex: 0 0 75%;
-    height: 540px;
-    max-height: 600px;
-    text-align: left;
-    margin-top: 2rem;
+.personalInfo-main {
     margin-left: 4rem;
-    // border: 1px solid red;
-    position: relative;
-    
-    .context-title {
-        color: hsl(227, 46%, 17%);
-        margin: 0;
-        padding: 0;
-        h1 {
-            margin-bottom: 10px;
-        }
-        span {
-            // color: hsl(231, 11%, 63%);
-        color: hsl(229, 7%, 68%);
-        // color: hsl(229, 24%, 87%);
-        }
-    }
-    .context-main {
-        display: flex;
-        flex-direction: column;
-        span {
-            margin: 30px 0 10px 0;
-            color: hsl(227, 46%, 17%);
-        }
-        input {
-            width: 440px;
-            height: 40px;
-            border-radius: 7px;
-            border: 1px solid hsl(229, 7%, 68%);
-            padding-left: 10px;
-        }
-    }
+    // position: relative;
+}
 
-}
-.context-buttons {
-    button {
-        padding: 10px 15px;
-        color: #fff;
-        border-radius: 5px;
-        background-color: rgb(20, 7, 122);
-        position: absolute;
-        bottom: 0;
-        right: 50px;
+.context-main {
+    // height: 420px;
+    // height: calc(72vh - 200px);
+    display: flex;
+    flex-direction: column;
+    // position: relative;
+    // border: 1px solid red;
+    & label {
+        display: block;
+        // justify-content: start;
+        // align-items: start;
+        text-align: left;
+        margin: 16px 0 -10px 0;
+        color: hsl(227, 46%, 17%);
+        // color: hsl(228, 45%, 44%);
+    }
+    input {
+        display: block;
+        width: 440px;
+        height: 40px;
+        border-radius: 7px;
+        border: 1px solid hsl(229, 7%, 68%);
+        padding-left: 10px;
         
-        &:hover {
-            background-color: hsl(243, 100%, 62%);
+        &:focus {
+            outline: none;
+            border: 2px solid hsl(228, 45%, 44%);
+            // border-color: #282c34;
+        }
+        &:last-child{
+            margin-bottom: 100px;
+            // border: 1px solid red;
         }
     }
 }
+
+
+// .context-buttons {
+//         padding: 10px 15px;
+//         color: #fff;
+//         border-radius: 5px;
+//         background-color: rgb(20, 7, 122);
+//         position: absolute;
+//         bottom: 0;
+//         right: 0;
+        
+//         &:hover {
+//             background-color: hsl(243, 100%, 62%);
+//     }
+// }

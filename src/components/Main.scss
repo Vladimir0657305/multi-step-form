@@ -1,0 +1,11 @@
+.main-block {
+    // width: 100vw;
+    // height: 100vh;
+    display: flex;
+}
+.side {
+    flex: 0 0 50%;
+}
+.main-context {
+    position: relative;
+}

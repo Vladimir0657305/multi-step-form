@@ -1,0 +1,39 @@
+.selectPlan-main {
+    // display: flex;
+    // width: 100%;
+    border: 1px solid red;
+    margin-left: 4rem;
+}
+
+.context {
+    // width: 100%;
+    // flex: 0 0 50%;
+    height: 540px;
+    max-height: 600px;
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    // border: 1px solid red;
+    position: relative;
+
+    .context-title {
+        color: hsl(227, 46%, 17%);
+        padding: 0;
+        margin-bottom: 1.6rem;
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        span {
+            // color: hsl(231, 11%, 63%);
+            color: hsl(229, 7%, 68%);
+            // color: hsl(229, 24%, 87%);
+        }
+    }
+
+    .context-main {
+        
+    }
+
+}
