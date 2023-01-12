@@ -4,8 +4,8 @@ import 'react-input-checkbox/lib/react-input-checkbox.min.css';
 import { Checkbox } from 'react-input-checkbox';
 import './PickAddOns.scss';
 
-export const priceAddOnsMonthly = [1, 2, 2];
-export const priceAddOnsYearly = [10, 20, 20];
+import { priceAddOnsMonthly } from './config';
+import { priceAddOnsYearly } from './config';
 
 
 export default function PickAddOns() {
@@ -14,9 +14,9 @@ export default function PickAddOns() {
     const { customProfile, setCustomProfile } = useContext(FormInputData);
     const { checkedPlan, setCheckedPlan } = useContext(FormInputData);
 
-    useEffect(() => {
-        console.log(onlineServ, largerStorage, customProfile)
-    }, [onlineServ, largerStorage, customProfile])
+    // useEffect(() => {
+    //     console.log(onlineServ, largerStorage, customProfile)
+    // }, [onlineServ, largerStorage, customProfile])
 
 
     return (

@@ -1,7 +1,6 @@
 import './Sidebar.scss';
 
 export default function Sidebar(stepCount) {
-    console.log(stepCount.stepCount);
 
     return (
         <>

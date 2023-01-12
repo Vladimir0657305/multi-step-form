@@ -7,6 +7,7 @@ import './Main.scss';
 import PersonalInfo from './PersonalInfo';
 import SelectPlan from './SelectPlan';
 import PickAddOns from './PickAddOns';
+import FinishingUp from './FinishingUp';
 
 export const FormInputData = createContext('');
 
@@ -19,7 +20,7 @@ export default function Main() {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState('');
     const [checkedPlan, setCheckedPlan] = useState(false);
-    const [plan, setPlan] = useState('');
+    const [plan, setPlan] = useState('Arcade');
     const [period, setPeriod] = useState('Monthly');
     const [onlineServ, setOnlineServ] = useState(false);
     const [largerStorage, setLargerStorage] = useState(false);
@@ -41,21 +42,24 @@ export default function Main() {
 
     useEffect(() => {
         switch (stepCount) {
-            case 0 : 
+            case 0:
                 navigate('/')
-            break;
-            case 1 : 
+                break;
+            case 1:
                 navigate('/selectplan')
-            break;
-            case 2 : 
+                break;
+            case 2:
                 navigate('/pickaddons')
-            break;
-            
+                break;
+            case 3:
+                navigate('/finishingup')
+                break;
+
         }
-    },[stepCount])
+    }, [stepCount])
 
     useEffect(() => {
-        stepCount === 0 && setCheckedPlan(false) 
+        stepCount === 0 && setCheckedPlan(false)
         // stepCount === 0 ? setCheckedPlan(false) : stepCount
     }, [stepCount])
 
@@ -82,12 +86,13 @@ export default function Main() {
                         </div>
                         <main className='main-context'>
                             {/* <div className="context"> */}
-                            <Title />
+                            <Title stepCount={stepCount} />
                             {/* </div> */}
                             <Routes>
                                 <Route path='/' element={<PersonalInfo />} />
                                 <Route path='/selectplan' element={<SelectPlan />} />
                                 <Route path='/pickaddons' element={<PickAddOns />} />
+                                <Route path='/finishingup' element={<FinishingUp />} />
                                 {/* <Route path='*' element={<NotFound />} />  */}
                             </Routes>
 

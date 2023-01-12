@@ -3,8 +3,8 @@ import './SelectPlan.scss';
 import Switch from "react-switch";
 import { FormInputData } from './Main';
 
-export const priceArrMonthly = [9, 12, 15];
-export const priceArrYearly = [9, 12, 15];
+import { priceArrMonthly } from './config';
+import { priceArrYearly } from './config';
 
 export default function SelectPlan() {
     const { checkedPlan, setCheckedPlan } = useContext(FormInputData);
@@ -16,9 +16,13 @@ export default function SelectPlan() {
     }
 
     const onClickCard = (props) => {
-        setPeriod(checkedPlan ? 'Yearly' : 'Monthly')
+        
         setPlan(props);
     }
+
+    useEffect(() => { 
+        setPeriod(checkedPlan ? 'Yearly' : 'Monthly');
+    }, [checkedPlan])
 
     return (
         <>

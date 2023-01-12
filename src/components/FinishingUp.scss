@@ -1,0 +1,28 @@
+.context-main__finishingUp {
+    display: flex;
+        flex-direction: column;
+    
+        &:last-child {
+            margin-bottom: 96px;
+        }
+
+    .context-finishingUp {
+        // display: flex;
+        // justify-content: space-between;
+        width: 460px;
+        height: 175px;
+        border-radius: 10px;
+        // margin-right: 20px;
+        border: 1px solid transparent;
+        // display: grid;
+        // grid-template-columns: 78px 300px 100px;
+        // grid-template-rows: 80px;
+        background-color: hsl(230deg, 23%, 95%);
+        &:last-child{
+            height: 80px;
+            margin-top: 15px;
+            // background-color: transparent;
+        }
+            
+    }
+}
