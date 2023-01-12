@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FormInputData } from './Main';
 import './FinishingUp.scss';
 import { priceArrMonthly } from './config';
@@ -14,8 +15,10 @@ export default function FinishingUp() {
     const { checkedPlan, setCheckedPlan } = useContext(FormInputData);
     const {plan, setPlan} = useContext(FormInputData);
     const {period, setPeriod} = useContext(FormInputData);
-    console.log(priceArrMonthly, priceArrYearly, plan, period);
+    const {stepCount, setStepCount} = useContext(FormInputData);
+    let navigate = useNavigate();
     let planOutTarif = 0;
+
     switch (plan) {
         case ('Arcade') : {
             planOutTarif = period == 'Monthly' ? `${priceArrMonthly[0]}/mo` : `${priceArrYearly[0]}/yr`;
@@ -30,6 +33,18 @@ export default function FinishingUp() {
             break;
         }
     }
+
+    const onChangeFinishingUpPlan = () => {
+        setPlan('Arcade');
+        setPeriod('Monthly');
+        setOnlineServ(false);
+        setLargerStorage(false);
+        setCustomProfile(false);
+        setStepCount(1);
+        setCheckedPlan(false);
+        navigate('/selectplan');
+    }
+    
     return(
         <>
             <section>
@@ -37,24 +52,49 @@ export default function FinishingUp() {
                     <div className="context">
                         <div className="context-main">
                             <div className='context-main__finishingUp'>
-                                <div className='context-finishingUp'  >
-                                    <span>{plan} ({period})</span>
-                                    <span>Change</span><span>+${planOutTarif} </span>
-                                    {/* <span>Online service</span> <span>+${onlineServ ? priceAddOnsYearly[0] : priceAddOnsMonthly[0] } </span> */}
+
+                                {/* === Plan ==== */}
+                                {/* <div className='context-finishingUpPlan'  > */}
+                                <div className={
+                                    onlineServ || largerStorage || customProfile ? 'context-finishingUpPlan bordBotNone' : 'context-finishingUpPlan'
+                                }  >
+                                    <div className='finishingUpPlan'>
+                                        <span>{plan} ({period})</span>
+                                        <a onClick={onChangeFinishingUpPlan} >Change</a>
+                                    </div>
+                                    <div className='finishingUpPlanSum'>
+                                        <span>+${planOutTarif} </span>
+                                    </div>
+                                </div>
+
+                                {/* === Line ==== */}
+                                <div className={
+                                    onlineServ || largerStorage || customProfile ? 'finishingUpPlanLine' : ''
+                                }></div>
+
+                                {/* === Online Serice ==== */}
+                                <div className={
+                                    onlineServ ? 'finishingUpAddOns' : 'hidden'
+                                }>
                                     <span>Online service</span> <span>{onlineServ ? `+$${priceAddOnsMonthly[0]}/mo` : `+$${priceAddOnsYearly[0]}/yr` }</span>
                                 </div>
-                                <div className=''  >
-                                    {/* <Checkbox theme="material-checkbox" value={largerStorage} onChange={() => setLargerStorage(!largerStorage)}></Checkbox>
-                                    <span className='context-addons__title'>Larger storage</span>
-                                    <p>Extra 1TB of cloud save</p>
-                                    <span className='context-addons__text'>+${checkedPlan ? priceAddOnsYearly[1] : priceAddOnsMonthly[1]}/mo</span> */}
+
+                                {/* === Larger Storage ==== */}
+                                <div className={
+                                    largerStorage ? 'finishingUpAddOns' : 'hidden'
+                                }>
+                                    <span>Larger Storage</span> <span>{largerStorage ? `+$${priceAddOnsMonthly[1]}/mo` : `+$${priceAddOnsYearly[1]}/yr` }</span>
                                 </div>
-                                <div className='context-finishingUp'  >
-                                    {/* <Checkbox theme="material-checkbox" value={customProfile} onChange={() => setCustomProfile(!customProfile)}></Checkbox>
-                                    <span className='context-addons__title'>Customizable Profile</span>
-                                    <p>Custom theme on your profile</p>
-                                    <span className='context-addons__text'>+${checkedPlan ? priceAddOnsYearly[2] : priceAddOnsMonthly[2]}/mo</span> */}
+                                
+                                {/* === Customizable Profile ==== */}
+                                <div className={
+                                    largerStorage ? 'finishingUpAddOns' : 'hidden'
+                                }>
+                                    <span>Larger Storage</span> <span>{largerStorage ? `+$${priceAddOnsMonthly[1]}/mo` : `+$${priceAddOnsYearly[1]}/yr` }</span>
                                 </div>
+
+                                
+                                
                             </div>
                         </div>
                     </div>
