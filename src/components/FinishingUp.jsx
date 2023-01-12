@@ -71,7 +71,7 @@ export default function FinishingUp() {
             largerStorageToTotal = priceAddOnsMonthly[1];
         }
     }
-    
+
     if (customProfile) {
         if (checkedPlan) {
             customProfileToTotal = priceAddOnsYearly[2];
@@ -91,8 +91,7 @@ export default function FinishingUp() {
         setCheckedPlan(false);
         navigate('/selectplan');
     }
-    console.log(planOutTarifToTotal);
-    console.log(onlineServ ? checkedPlan ? priceAddOnsYearly[0] : priceAddOnsMonthly[0] : '')
+
     total = planOutTarifToTotal + onlineServToTotal + largerStorageToTotal + customProfileToTotal;
 
     return (
@@ -122,26 +121,28 @@ export default function FinishingUp() {
                                 }></div>
 
                                 {/* === Online Serice ==== */}
-                                <div className={
-                                    onlineServ ? 'finishingUpAddOns' : 'hidden'
+                                {
+                                    onlineServ && <div className={
+                                        customProfile || largerStorage ? 'finishingUpAddOns bordBotNone' : 'finishingUpAddOns'
+                                    }>
+                                        <span>Online service</span> <span>{checkedPlan ? `+$${priceAddOnsYearly[0]}/yr` : `+$${priceAddOnsMonthly[0]}/mo`}</span>
+                                    </div>
                                 }
-                                // id={customProfile || largerStorage || onlineServ ? }
-                                >
-                                    <span>Online service</span> <span>{checkedPlan ? `+$${priceAddOnsYearly[0]}/yr` : `+$${priceAddOnsMonthly[0]}/mo`}</span>
-                                </div>
 
                                 {/* === Larger Storage ==== */}
-                                <div className={
-                                    largerStorage ? 'finishingUpAddOns' : 'hidden'
-                                }>
-                                    <span>Larger Storage</span> <span>{checkedPlan ? `+$${priceAddOnsYearly[1]}/yr` : `+$${priceAddOnsMonthly[1]}/mo`}</span>
-                                </div>
+                                {
+                                    largerStorage && <div className={
+                                        customProfile ? 'finishingUpAddOns bordBotNone' : 'finishingUpAddOns '
+                                    }>
+                                        <span>Larger Storage</span> <span>{checkedPlan ? `+$${priceAddOnsYearly[1]}/yr` : `+$${priceAddOnsMonthly[1]}/mo`}</span>
+                                    </div>
+                                }
 
                                 {/* === Customizable Profile ==== */}
                                 <div className={
                                     customProfile ? 'finishingUpAddOns' : 'hidden'
                                 }>
-                                    <span>Larger Storage</span> <span>{checkedPlan ? `+$${priceAddOnsYearly[2]}/yr` : `+$${priceAddOnsMonthly[2]}/mo`}</span>
+                                    <span>Customizable Profile</span> <span>{checkedPlan ? `+$${priceAddOnsYearly[2]}/yr` : `+$${priceAddOnsMonthly[2]}/mo`}</span>
                                 </div>
 
                                 {/* === Total ==== */}

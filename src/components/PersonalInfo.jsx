@@ -70,14 +70,9 @@ export default function PersonalInfo() {
                                 autoComplete='on'
                                 required
                             />
-                            {/* <button className="context-buttons" >Next Step</button> */}
                         </form>
-
                     </div>
-
-
                 </main>
-
             </section>
         </>
     );

@@ -8,6 +8,7 @@ import PersonalInfo from './PersonalInfo';
 import SelectPlan from './SelectPlan';
 import PickAddOns from './PickAddOns';
 import FinishingUp from './FinishingUp';
+import ThankYou from './ThankYou';
 
 export const FormInputData = createContext('');
 
@@ -54,6 +55,9 @@ export default function Main() {
             case 3:
                 navigate('/finishingup')
                 break;
+            case 4:
+                navigate('/thankyou')
+                break;
 
         }
     }, [stepCount])
@@ -85,23 +89,16 @@ export default function Main() {
                             <Sidebar stepCount={stepCount} />
                         </div>
                         <main className='main-context'>
-                            {/* <div className="context"> */}
                             <Title stepCount={stepCount} />
-                            {/* </div> */}
                             <Routes>
                                 <Route path='/' element={<PersonalInfo />} />
                                 <Route path='/selectplan' element={<SelectPlan />} />
                                 <Route path='/pickaddons' element={<PickAddOns />} />
                                 <Route path='/finishingup' element={<FinishingUp />} />
+                                <Route path='/thankyou' element={<ThankYou />} />
                                 {/* <Route path='*' element={<NotFound />} />  */}
                             </Routes>
-
-
                             <ContextButton />
-                            {/* <div className="context-buttons">
-                            <button >Next Step</button>
-                        </div> */}
-
                         </main>
                     </FormInputData.Provider>
                 </div>

@@ -2,31 +2,24 @@
     display: flex;
     flex-direction: column;
     height: 273px;
-    
+    height: 323px;
     &:last-child {
-        margin-bottom: 96px;
+        margin-bottom: 46px;
     }
 
     .context-finishingUpPlan {
         display: flex;
-        // flex-direction: column;
         justify-content: space-between;
         width: 462px;
         height: 80px;
-        // border-radius: 10px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color: hsl(230deg, 23%, 95%);
-        // padding-right: 20px;
-        // margin-right: 20px;
-        // border: 1px solid transparent;
-        // display: grid;
-        // grid-template-columns: 78px 300px 100px;
-        // grid-template-rows: 80px;
-        
+
         .finishingUpPlan {
+            height: 80px;
             display: flex;
             flex-direction: column;
             // align-items: center;
@@ -74,29 +67,12 @@
     margin-top: -1px;
     background-color: hsl(230deg, 23%, 95%);
     border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     & span {
         margin: 20px;
     }
-    
-        &:last-of-type {
-            // background-color: red;
-            // border-bottom-right-radius: 10px;
-            // border-bottom-left-radius: 10px;
-        }
 }
-// .finishingUpLargerStorage {
-//     display: flex;
-//         justify-content: space-between;
-//         width: 462px;
-//         height: 60px;
-//         margin-top: -1px;
-//         background-color: hsl(230deg, 23%, 95%);
-    
-//         & span {
-//             margin: 20px;
-//         }
-// }
+
 .finishingUpAddOnsTotal {
     display: flex;
     justify-content: space-between;
