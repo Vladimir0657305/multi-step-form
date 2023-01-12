@@ -1,33 +1,16 @@
-.selectPlan-main {
-    // display: flex;
-    // width: 100%;
-    // border: 1px solid red;
-    // margin-left: 4rem;
-}
-
 .context {
-
-    // height: 540px;
     max-height: 600px;
     text-align: left;
     margin-top: 2rem;
-    // margin-left: 4rem;
-    // border: 1px solid red;
-    // position: relative;
 
     .context-title {
         color: hsl(227, 46%, 17%);
         padding: 0;
         margin-bottom: 1.6rem;
-
     }
 
-    .context-main {
-        // border: 1px solid red;
-    }
     .context-main__cards {
         display: flex;
-        // border: 1px solid red;
     }
     .context-card {
         width: 130px;
@@ -44,22 +27,14 @@
             font-size: 14px;
             margin-top: -15px;
             margin-left: 20px;
-            // padding: 5px 0 2px 0;
-            // margin-bottom: 10px;
             color: hsl(229, 7%, 68%);
-            // &:last-child {
-            //     color: #000;
-            //     font-weight: 700;
-            // }
-            
         }
         &:hover {
             border: 2px solid hsl(227, 46%, 17%);
         }
-        
     }
-    
 }
+
 .lastSpan{
         color: hsl(228, 45%, 44%) !important;
         font-weight: 700;
@@ -75,7 +50,6 @@
     background-color: hsl(230, 23%, 95%);
     font-weight: 700;
     display: flex;
-    // align-items: center;
     justify-content: center;
 }
 .context-switch {

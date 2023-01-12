@@ -1,18 +1,13 @@
-import { useState, createRef, useEffect, useContext } from 'react';
-import ContextButton from './ContextButton';
+import { createRef, useEffect, useContext } from 'react';
 import './PersonalInfo.scss';
-import Sidebar from './Sidebar';
 import { FormInputData } from './Main';
-import Title from './Title';
-
 
 export default function PersonalInfo() {
     const refInputName = createRef();
-    const {user, setUser} = useContext(FormInputData);
-    const {inputEmail, setInputEmail} = useContext(FormInputData);
-    const {inputPhone, setInputPhone} = useContext(FormInputData);
-    const {errMsg, setErrMsg} = useContext(FormInputData);
-    const {success, setSuccess} = useContext(FormInputData);
+    const { user, setUser } = useContext(FormInputData);
+    const { inputEmail, setInputEmail } = useContext(FormInputData);
+    const { inputPhone, setInputPhone } = useContext(FormInputData);
+    const { errMsg, setErrMsg } = useContext(FormInputData);
 
     useEffect(() => {
         refInputName.current.focus();
@@ -27,7 +22,6 @@ export default function PersonalInfo() {
             <section>
                 <main className='personalInfo-main'>
                     <div className="context-main">
-                        {/* <form onSubmit={handleSubmit}> */}
                         <form >
                             <label htmlFor='userName'>Name</label>
                             <br />
@@ -47,7 +41,6 @@ export default function PersonalInfo() {
                             <br />
                             <input
                                 id='inputEmail'
-                                // ref={refInputEmail} 
                                 type="text"
                                 value={inputEmail}
                                 onChange={(e) => setInputEmail(e.target.value)}
@@ -61,8 +54,7 @@ export default function PersonalInfo() {
                             <br />
                             <input
                                 id='inputPhone'
-                                // ref={refInputPhone} 
-                                type="text"
+                                type="number"
                                 value={inputPhone}
                                 onChange={(e) => setInputPhone(e.target.value)}
                                 aria-label="Input Phone"

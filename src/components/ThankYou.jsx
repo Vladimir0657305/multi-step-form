@@ -1,4 +1,4 @@
-import { useMemo, useContext, useCallback, useEffect, useState } from 'react';
+import { useContext, useCallback, useEffect, useState } from 'react';
 import { FormInputData } from './Main';
 import { useNavigate } from 'react-router-dom';
 import './ThankYou.scss';
@@ -13,8 +13,6 @@ export default function ThankYou() {
     const { period, setPeriod } = useContext(FormInputData);
     const [show, setShow] = useState(true);
     let navigate = useNavigate();
-
-
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -31,9 +29,7 @@ export default function ThankYou() {
         return () => clearInterval(interval);
     }, [stepCount === 4]);
 
-
     const displayThankYou = useCallback(
-
         <section>
             <main className='thankYou-main'>
                 <div className="context-thankYou__main">
@@ -45,7 +41,6 @@ export default function ThankYou() {
                 </div>
             </main>
         </section>
-
     )
 
     return (
@@ -53,7 +48,6 @@ export default function ThankYou() {
             {
                 show && displayThankYou
             }
-
         </>
     );
 }

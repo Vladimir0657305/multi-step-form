@@ -1,7 +1,7 @@
 import './Footer.scss';
 
 export default function Footer() {
-    return(
+    return (
         <footer>
             <div className="footer">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

@@ -12,9 +12,7 @@ import ThankYou from './ThankYou';
 
 export const FormInputData = createContext('');
 
-
 export default function Main() {
-
     const [user, setUser] = useState('');
     const [inputEmail, setInputEmail] = useState('');
     const [inputPhone, setInputPhone] = useState('');
@@ -28,15 +26,6 @@ export default function Main() {
     const [customProfile, setCustomProfile] = useState(false);
     const [stepCount, setStepCount] = useState(0);
     let navigate = useNavigate();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(user, inputEmail, inputPhone);
-        setUser('');
-        setInputEmail('');
-        setInputPhone('');
-        setSuccess(true);
-    }
 
     useEffect(() => {
     }, [plan, period])
@@ -58,13 +47,11 @@ export default function Main() {
             case 4:
                 navigate('/thankyou')
                 break;
-
         }
     }, [stepCount])
 
     useEffect(() => {
         stepCount === 0 && setCheckedPlan(false)
-        // stepCount === 0 ? setCheckedPlan(false) : stepCount
     }, [stepCount])
 
     return (
@@ -103,7 +90,6 @@ export default function Main() {
                     </FormInputData.Provider>
                 </div>
             </section>
-
         </>
     );
 }

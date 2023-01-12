@@ -2,9 +2,6 @@ import './ContextButton.scss';
 import { FormInputData } from './Main';
 import { useContext } from 'react';;
 
-
-
-
 export default function ContextButton() {
     const { stepCount, setStepCount } = useContext(FormInputData);
 
@@ -26,7 +23,6 @@ export default function ContextButton() {
                 <span className={stepCount === 0 || stepCount === 4 ? 'prevButton invisib' : 'prevButton '} onClick={() => onPressPrevButton()}>Go Back</span>
                 <span className={stepCount === 4 ? 'nextButton invisib' : 'nextButton'} onClick={() => onPressNextButton()}>Next Step</span>
             </section>
-
         </>
     );
 }

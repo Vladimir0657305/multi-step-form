@@ -1,22 +1,14 @@
 .personalInfo-main {
     margin-left: 4rem;
-    // border: 1px solid blue;
 }
 
 .context-main {
-    // height: 420px;
-    // height: calc(72vh - 200px);
     display: flex;
     flex-direction: column;
-    // position: relative;
-    // border: 1px solid red;
     & label {
         display: block;
-        // justify-content: start;
-        // align-items: start;
         text-align: left;
         margin: 16px 0 -10px 0;
-        // color: hsl(227, 46%, 17%);
         color: rgb(192, 191, 191);
     }
     input {
@@ -30,11 +22,9 @@
         &:focus {
             outline: none;
             border: 2px solid hsl(228, 45%, 44%);
-            // border-color: #282c34;
         }
         &:last-child{
             margin-bottom: 100px;
-            // border: 1px solid red;
         }
     }
 }

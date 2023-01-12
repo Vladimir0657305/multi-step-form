@@ -149,8 +149,6 @@ export default function FinishingUp() {
                                 <div className='finishingUpAddOnsTotal'>
                                     <span>Total ({checkedPlan ? 'per year' : 'per month'})</span> <span>{checkedPlan ? `$${total}/yr` : `+$${total}/mo`}</span>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>

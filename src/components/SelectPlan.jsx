@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './SelectPlan.scss';
 import Switch from "react-switch";
 import { FormInputData } from './Main';
@@ -16,11 +16,11 @@ export default function SelectPlan() {
     }
 
     const onClickCard = (props) => {
-        
+
         setPlan(props);
     }
 
-    useEffect(() => { 
+    useEffect(() => {
         setPeriod(checkedPlan ? 'Yearly' : 'Monthly');
     }, [checkedPlan])
 
@@ -82,7 +82,6 @@ export default function SelectPlan() {
                                 </label>
                                 <p className={checkedPlan ? 'switchActive' : ''} > Yearly</p>
                             </div>
-
                         </div>
                     </div>
                 </main>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { FormInputData } from './Main';
 import 'react-input-checkbox/lib/react-input-checkbox.min.css';
 import { Checkbox } from 'react-input-checkbox';
@@ -14,11 +14,6 @@ export default function PickAddOns() {
     const { customProfile, setCustomProfile } = useContext(FormInputData);
     const { checkedPlan, setCheckedPlan } = useContext(FormInputData);
 
-    // useEffect(() => {
-    //     console.log(onlineServ, largerStorage, customProfile)
-    // }, [onlineServ, largerStorage, customProfile])
-
-
     return (
         <>
             <section>
@@ -30,7 +25,7 @@ export default function PickAddOns() {
                                     <Checkbox theme="material-checkbox" value={onlineServ} onChange={() => setOnlineServ(!onlineServ)} className='check'></Checkbox>
                                     <span className='context-addons__title'>Online service</span>
                                     <p>Access to multiplayer games</p>
-                                    <span className='context-addons__text'>+${checkedPlan ? priceAddOnsYearly[0] : priceAddOnsMonthly[0]  }/mo</span>
+                                    <span className='context-addons__text'>+${checkedPlan ? priceAddOnsYearly[0] : priceAddOnsMonthly[0]}/mo</span>
                                 </div>
                                 <div className='context-addons'  >
                                     <Checkbox theme="material-checkbox" value={largerStorage} onChange={() => setLargerStorage(!largerStorage)}></Checkbox>
