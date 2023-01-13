@@ -4,6 +4,6 @@
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=Vladimir0657305)]([https://github.com/ryo-ma/github-profile-trophy](https://github.com/Vladimir0657305))
 
-[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Vladimir0657305)](https://github.com/Vladimir0657305/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Vladimir0657305)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 ![](https://komarev.com/ghpvc/?username=Vladimir0657305)
