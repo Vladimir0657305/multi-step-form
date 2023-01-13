@@ -3,3 +3,5 @@
 [![image](https://github.com/Vladimir0657305/multi-step-form/blob/main/multi-step-form-main.gif)](https://github.com/Vladimir0657305/multi-step-form)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=Vladimir0657305)]([https://github.com/ryo-ma/github-profile-trophy](https://github.com/Vladimir0657305))
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Vladimir0657305)](https://github.com/anuraghazra/github-readme-stats)
