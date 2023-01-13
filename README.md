@@ -2,4 +2,4 @@
 
 [![image](https://github.com/Vladimir0657305/multi-step-form/blob/main/multi-step-form-main.gif)](https://github.com/Vladimir0657305/multi-step-form)
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Vladimir0657305)]([https://github.com/ryo-ma/github-profile-trophy](https://github.com/Vladimir0657305))
