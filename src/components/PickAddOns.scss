@@ -54,7 +54,8 @@
         
     }
 }
-@media (max-width: 380px) {
+// @media (max-width: 380px) {
+@media (max-width: var(--mobile-const)) {
     .pickAddOns-context {
         margin-left: 0rem;
         .context-main__addons {

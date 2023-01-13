@@ -33,7 +33,8 @@
     opacity: 0 !important;
     visibility: hidden;
 }
-@media (max-width: 380px) {
+// @media (max-width: 380px) {
+@media (max-width: var(--mobile-const)) {
     .context-buttons {
         width: 280px;
         margin-left: 0;

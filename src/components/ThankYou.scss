@@ -18,7 +18,8 @@
     }
 }
 
-@media (max-width: 380px) {
+// @media (max-width: 380px) {
+@media (max-width: var(--mobile-const)) {
     .thankYou-main {
         width: 380px;
         margin-left: 0;

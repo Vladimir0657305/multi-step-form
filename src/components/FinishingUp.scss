@@ -87,7 +87,8 @@
     display: none;
 }
 
-@media (max-width: 380px) {
+// @media (max-width: 380px) {
+@media (max-width: var(--mobile-const)) {
     .finishingUpAddOns {
         width: 288px !important;
     }
