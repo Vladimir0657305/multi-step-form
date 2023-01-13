@@ -1,4 +1,4 @@
-.context {
+.pickAddOns-context {
     max-height: 600px;
     text-align: left;
     margin-top: 3rem;
@@ -54,6 +54,32 @@
         
     }
 }
+@media (max-width: 380px) {
+    .pickAddOns-context {
+        margin-left: 0rem;
+        .context-main__addons {
+            // width: 60%;
+        }
+        .context-addons {
+            width: 270px;
+            .context-addons__title {
+                margin-left: -30px;
+            }
+            p {
+                margin-left: -30px;
+            }
+        }
+    }
+    .material-checkbox {
+        padding-left: 40px !important;
+        
+    }
+    .Checkbox_themed.material-checkbox {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
 /* === Theme ============================================================================================== */
 .material-checkbox {
     padding-left: 60px;

@@ -18,7 +18,7 @@ export default function PickAddOns() {
         <>
             <section>
                 <main className='pickAddOns-main'>
-                    <div className="context">
+                    <div className="pickAddOns-context">
                         <div className="context-main">
                             <div className='context-main__addons'>
                                 <div className='context-addons'  >
