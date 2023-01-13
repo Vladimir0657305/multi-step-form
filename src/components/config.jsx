@@ -9,6 +9,3 @@ export const priceAddOnsMonthly = [1, 2, 2];
 
 // Set tarif for the 'Online service', 'Larger storage', 'Customizable profile' plans per year.
 export const priceAddOnsYearly = [10, 20, 20];
-
-// Set tarif for the 'Online service', 'Larger storage', 'Customizable profile' plans per year.
-// export const onlineServTarif = [1, 10]

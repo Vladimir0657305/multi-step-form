@@ -9,6 +9,7 @@ import SelectPlan from './SelectPlan';
 import PickAddOns from './PickAddOns';
 import FinishingUp from './FinishingUp';
 import ThankYou from './ThankYou';
+import NotFound from './NotFound';
 
 export const FormInputData = createContext('');
 
@@ -83,6 +84,9 @@ export default function Main() {
                                 <Route path='/pickaddons' element={<PickAddOns />} />
                                 <Route path='/finishingup' element={<FinishingUp />} />
                                 <Route path='/thankyou' element={<ThankYou />} />
+                                <Route path="''" element={<NotFound />} /> 
+                                <Route path="*" element={<NotFound />} /> 
+                                <Route element={<NotFound />} /> 
                                 {/* <Route path='*' element={<NotFound />} />  */}
                             </Routes>
                             <ContextButton />
