@@ -16,7 +16,6 @@ export default function SelectPlan() {
     }
 
     const onClickCard = (props) => {
-
         setPlan(props);
     }
 
@@ -32,7 +31,7 @@ export default function SelectPlan() {
 
                         <div className="context-main">
                             <div className='context-main__cards'>
-                                <div className='context-card' onClick={() => onClickCard('Arcade')} >
+                                <div className={plan == 'Arcade' ? 'context-card context-card__active' : 'context-card'}  onClick={() => onClickCard('Arcade')} >
                                     <img src='../images/icon-arcade.svg' alt='context-card-image' />
                                     <h4>Arcade</h4>
                                     {
@@ -41,7 +40,7 @@ export default function SelectPlan() {
                                             <span>${priceArrMonthly[0]}/mo</span>
                                     }
                                 </div>
-                                <div className='context-card' onClick={() => onClickCard('Advanced')} >
+                                <div className={plan == 'Advanced' ? 'context-card context-card__active' : 'context-card'} onClick={() => onClickCard('Advanced')} >
                                     <img src='../images/icon-advanced.svg' alt='context-card-image' />
                                     <h4>Advanced</h4>
                                     {
@@ -50,7 +49,7 @@ export default function SelectPlan() {
                                             <span>${priceArrMonthly[1]}/mo</span>
                                     }
                                 </div>
-                                <div className='context-card' onClick={() => onClickCard('Pro')}>
+                                <div className={plan == 'Pro' ? 'context-card context-card__active' : 'context-card'} onClick={() => onClickCard('Pro')}>
                                     <img src='../images/icon-pro.svg' alt='context-card-image' />
                                     <h4>Pro</h4>
                                     {

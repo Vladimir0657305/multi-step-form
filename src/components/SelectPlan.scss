@@ -31,8 +31,11 @@
             color: hsl(229, 7%, 68%);
         }
         &:hover {
-            border: 2px solid hsl(227, 46%, 17%);
+            border: 2px solid hsl(227, 73%, 50%);
         }
+    }
+    .context-card__active {
+        background-color: #EEF5FF;
     }
 }
 
