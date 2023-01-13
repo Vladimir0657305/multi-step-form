@@ -28,3 +28,21 @@
         }
     }
 }
+@media (max-width: 380px) {
+    .personalInfo-main {
+        margin-left: 0;
+        // background-color: red;
+    }
+    .context-main {
+        margin-left: 1rem;
+        label {
+            margin: 0px 0 -10px 0 ;
+            &:first-child {
+                margin-top: 20px;
+            }
+        }
+        input {
+            width: 270px;
+        }
+    }
+}

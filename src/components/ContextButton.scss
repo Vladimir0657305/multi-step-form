@@ -33,3 +33,14 @@
     opacity: 0 !important;
     visibility: hidden;
 }
+@media (max-width: 380px) {
+    .context-buttons {
+        width: 280px;
+        margin-left: 0;
+        position: fixed;
+        bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

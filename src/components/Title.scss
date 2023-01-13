@@ -1,4 +1,4 @@
-.titleContext {
+.titleContext{
     height: 65px;
     text-align: left;
     margin-top: 3rem;
@@ -17,5 +17,11 @@
         span {
             color: hsl(229, 7%, 68%);
         }
+    }
+}
+@media (max-width: 380px) {
+    .titleContext {
+        margin-top: 0;
+        margin-left: 1rem;
     }
 }

@@ -1,3 +1,4 @@
+import bg_image from '../images/bg-sidebar-desktop.svg';
 import './Sidebar.scss';
 
 export default function Sidebar(stepCount) {
@@ -5,6 +6,11 @@ export default function Sidebar(stepCount) {
     return (
         <>
             <div className="sidebar">
+                {/* <img src={bg_image} alt="background-image" /> */}
+
+                <div className="sidebar-block">
+
+                
 
                 {/* --- Item 1 --- */}
                 <div className="sidebar-items">
@@ -64,6 +70,8 @@ export default function Sidebar(stepCount) {
                             <span>SUMMARY</span>
                         </div>
                     </div>
+                </div>
+                    {/* <img src={bg_image} alt="background-image" /> */}
                 </div>
             </div>
         </>

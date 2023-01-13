@@ -12,8 +12,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(228, 22%, 82%);
-  background-color: hsl(204, 16%, 87%);
+  /* background-color: hsl(228, 22%, 82%);
+  background-color: hsl(204, 16%, 87%); */
   background-color: #EEF5FF;
 }
 .App {
@@ -22,12 +22,11 @@ body{
   font-size: 16px;
   text-align: center;
   width: 1000px;
-  max-width: 1000px;
   height: 600px;
   border-radius: 10px;
   display: flex;
   justify-content: start;
-  background: hsl(0, 0%, 100%) url(../src/images/bg-sidebar-desktop.svg) 3% 50% no-repeat;
+  background: hsl(0, 0%, 100%);
 }
 
 img {
@@ -36,4 +35,9 @@ img {
   height: auto;
   object-fit: cover;
   margin: 20px;
+}
+@media (max-width: 380px) {
+  body {
+    align-items: start;
+  }
 }
