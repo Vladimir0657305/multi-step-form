@@ -98,7 +98,7 @@ export default function FinishingUp() {
         <>
             <section>
                 <main className='finishingUp-main'>
-                    <div className="context">
+                    <div className="finishingUp-context">
                         <div className="context-main">
                             <div className='context-main__finishingUp'>
 

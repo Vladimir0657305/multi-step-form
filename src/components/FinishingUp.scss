@@ -1,7 +1,6 @@
 .context-main__finishingUp {
     display: flex;
     flex-direction: column;
-    height: 273px;
     height: 323px;
     &:last-child {
         margin-bottom: 46px;
@@ -41,19 +40,17 @@
             justify-content: center;
             margin-right: 20px;
         }
-        
-            
     }
 }
 .finishingUpPlanLine {
-            width: 90%;
-            height: 1px ;
-            z-index: 3;
-            display: flex;
-            justify-content: center;
-            margin-left: 20px;
-            background-color: hsl(229, 7%, 68%);
-        }
+    width: 90%;
+    height: 1px ;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    background-color: hsl(229, 7%, 68%);
+}
 .bordBotNone {
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
@@ -83,12 +80,31 @@
     & span {
         margin: 20px;
     }
-    
 }
 .hidden {
     display: none;
 }
 
 @media (max-width: 380px) {
-    
+    .finishingUpAddOns {
+        width: 288px !important;
+    }
+    .finishingUpPlan {
+        & a {
+            margin-left: -76px;
+        }
+    }
+    .context-finishingUpPlan {
+        margin-top: 20px;
+        width: 288px !important;
+    }
+    .finishingUpAddOnsTotal {
+        width: 270px;
+        & span {
+                margin: 20px 0 0 20px;
+            }
+    }
+    .finishingUpPlanLine {
+        width: 82%;
+    }
 }
