@@ -19,8 +19,7 @@
         }
     }
 }
-// @media (max-width: 380px) {
-@media (max-width: var(--mobile-const)) {
+@media (max-width: 380px) {
     .titleContext {
         width: 95%;
         margin-top: 0;

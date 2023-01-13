@@ -28,8 +28,7 @@
         }
     }
 }
-// @media (max-width: 380px) {
-@media (max-width: var(--mobile-const)) {
+@media (max-width: 380px) {
     .personalInfo-main {
         margin-left: 0;
         // background-color: red;

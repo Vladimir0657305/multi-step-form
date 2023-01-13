@@ -63,8 +63,7 @@
     color: #000;
 }
 
-// @media (max-width: 380px) {
-@media (max-width: var(--mobile-const)) {
+@media (max-width: 380px) {
     .selectPlan-main {
         height: 360px;
         background-color: #fff;

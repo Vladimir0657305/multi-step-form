@@ -60,8 +60,7 @@
         color: #000;
 }
 
-// @media (max-width: 380px) {
-@media (max-width: var(--mobile-const)) {
+@media (max-width: 380px) {
     .sidebar{
         display: flex;
         flex-direction: column;

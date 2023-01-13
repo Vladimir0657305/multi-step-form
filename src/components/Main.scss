@@ -8,8 +8,7 @@
 .main-context {
     position: relative;
 }
-// @media (max-width: 380px) {
-@media (max-width: var(--mobile-const)) {
+@media (max-width: 380px) {
     .main-block {
         flex-direction: column;
         background-color: #EEF5FF;
